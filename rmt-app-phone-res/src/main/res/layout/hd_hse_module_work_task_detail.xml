@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/hd_hse_common_title_height"
+        android:background="@color/hd_hse_common_title_back" >
+
+        <ImageView
+            android:id="@+id/iv_work_task_detail_back"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="8dp"
+            android:padding="20dp"
+            android:src="@drawable/hd_hse_common_component_phone_actionbar_icon_back" />
+
+        <TextView
+            android:id="@+id/tv_work_task_detail_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="作业票详情"
+            android:textColor="@color/hd_hse_common_formtitle_white"
+            android:textSize="@dimen/hd_common_title_textsize" />
+    </RelativeLayout>
+
+    <WebView
+        android:id="@+id/wv_work_task_detail_detail"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+</LinearLayout>

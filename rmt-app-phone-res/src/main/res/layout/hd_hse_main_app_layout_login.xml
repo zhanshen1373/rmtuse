@@ -1,0 +1,167 @@
+<?xml version="1.0" encoding="utf-8"?><!-- <ScrollView xmlns:android="http://schemas.android.com/apk/res/android" --><!--         android:layout_width="match_parent" --><!--         android:layout_height="match_parent" --><!--         android:fillViewport="false"> -->
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/hd_hse_main_applogin_main"
+    android:layout_width="match_parent"
+    android:layout_height="fill_parent"
+    android:background="@color/hd_hse_common_btn_bg"
+    android:gravity="center_horizontal"
+    android:orientation="vertical"
+    android:overScrollMode="always"
+    android:paddingLeft="@dimen/hd_hse_login_left"
+    android:paddingRight="@dimen/hd_hse_login_left">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="0dip"
+        android:layout_weight="4" />
+
+    <ImageView
+        android:id="@+id/hd_hse_login_logo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+    <TextView
+        android:id="@+id/hd_hse_main_app_login_title_id"
+        android:layout_width="fill_parent"
+        android:layout_height="0dip"
+        android:layout_weight="5"
+        android:gravity="center_horizontal|center_vertical"
+        android:text="@string/hd_hse_main_app_login_title_tv"
+        android:textColor="@color/hd_hse_common_white"
+        android:textSize="@dimen/text_size_xxlarge" />
+
+    <TextView
+        android:layout_width="fill_parent"
+        android:layout_height="0dip"
+        android:layout_weight="3"
+        android:gravity="center_vertical"
+        android:text="用户名"
+        android:textColor="@color/hd_hse_common_white"
+        android:textSize="@dimen/text_size_large" />
+
+    <com.hd.hse.common.component.phone.custom.DrawEditText
+        android:id="@+id/nameEdit"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/hd_hse_common_edit_style"
+        android:completionThreshold="1"
+        android:drawableLeft="@drawable/hd_hse_login_username"
+        android:drawableRight="@drawable/hd_hse_main_app_login_more_select"
+        android:hint="@string/hd_hse_main_app_login_username_et"
+        android:maxLines="1"
+        android:singleLine="true"
+        android:textSize="@dimen/text_size_small" />
+
+    <TextView
+        android:layout_width="fill_parent"
+        android:layout_height="0dip"
+        android:layout_weight="3"
+        android:gravity="center_vertical"
+        android:text="密码"
+        android:textColor="@color/hd_hse_common_white"
+        android:textSize="@dimen/text_size_large" />
+
+    <com.hd.hse.common.component.phone.custom.DrawEditText
+        android:id="@+id/passEdit"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/hd_hse_common_edit_style"
+        android:drawableLeft="@drawable/hd_hse_login_pwd"
+        android:gravity="center_vertical"
+        android:hint="@string/hd_hse_main_app_login_password_et"
+        android:inputType="textPassword"
+        android:textSize="@dimen/text_size_medium" />
+
+    <!--ip-->
+    <RelativeLayout
+        android:id="@+id/layout_adress"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:visibility="gone"
+        >
+
+        <TextView
+            android:id="@+id/ip_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="地址"
+            android:textColor="@color/hd_hse_common_white"
+            android:textSize="@dimen/text_size_large"
+
+            />
+
+        <EditText
+            android:id="@+id/adressEdit"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/ip_text"
+            android:layout_marginLeft="@dimen/activity_horizontal_margin"
+            android:hint="ip地址"
+            android:padding="10dp" />
+
+        <CheckBox
+            android:id="@+id/adressBtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_below="@+id/ip_text"
+            android:layout_centerVertical="true"
+            android:paddingBottom="8dp"
+            android:paddingRight="8dp"
+            android:paddingTop="8dp" />
+    </RelativeLayout>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="0dip"
+        android:layout_weight="2" />
+
+    <Button
+        android:id="@+id/loginBtn"
+        android:layout_width="fill_parent"
+        android:layout_height="0dip"
+        android:layout_weight="3"
+        android:background="@drawable/hd_hse_main_login_btn_style"
+        android:clickable="true"
+        android:focusable="true"
+        android:gravity="center_vertical|center_horizontal"
+        android:text="登 录"
+        android:textColor="@color/hd_hse_common_white"
+        android:textSize="@dimen/text_size_xlarge" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="0dip"
+        android:layout_weight="1" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="3">
+
+
+        <CheckBox
+            android:id="@+id/autoLoginCheckBox"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_centerInParent="true"
+            android:button="@drawable/hd_hse_common_component_checkbox_selector"
+            android:gravity="center_vertical"
+            android:padding="@dimen/padding_large"
+            android:text="自动登录"
+            android:textColor="@drawable/hd_hse_main_app_common_contentlink_site_style"
+            android:textSize="@dimen/text_size_large" />
+
+    </RelativeLayout>
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="0dip"
+        android:layout_weight="4"
+        android:gravity="center_vertical"
+        android:text="@string/hd_hse_main_app_login_explain_tv"
+        android:textColor="@color/hd_hse_common_white"
+        android:textSize="@dimen/text_size_small" />
+</LinearLayout>

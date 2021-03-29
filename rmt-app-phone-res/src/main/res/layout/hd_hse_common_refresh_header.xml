@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- ListView的头部 -->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/hd_hse_common_refresh_head_contentLayout"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/hd_hse_common_white" 
+    android:gravity="center"
+    android:orientation="horizontal">
+
+        <!-- 箭头图像、进度条 -->
+
+        <FrameLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true" >
+
+            <!-- 箭头 -->
+
+            <ImageView
+                android:id="@+id/hd_hse_common_refresh_lvHeaderArrowIv"
+                android:layout_width="@dimen/margin_large"
+                android:layout_height="@dimen/margin_large"
+                android:layout_gravity="center"
+                android:src="@drawable/hd_hse_common_arrow" />
+
+            <!-- 进度条 -->
+
+            <ProgressBar
+                android:id="@+id/hd_hse_common_refresh_lvHeaderProgressBar"
+                style="?android:attr/progressBarStyleInverse"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:visibility="gone" />
+        </FrameLayout>
+
+        <!-- 提示、最近更新 -->
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal"
+            android:layout_marginLeft="@dimen/margin_medium"
+            android:orientation="vertical" >
+
+            <!-- 提示 -->
+
+            <TextView
+                android:id="@+id/hd_hse_common_refresh_lvHeaderTipsTv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="下拉刷新"
+                android:textColor="@color/hd_hse_common_alerttext_black"
+                android:textSize="@dimen/text_size_small" />
+
+            <!-- 最近更新 -->
+
+            <TextView
+                android:id="@+id/hd_hse_common_refresh_lvHeaderLastUpdatedTv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="尚不明确"
+                android:textColor="@color/hd_hse_common_cancel_gray"
+                android:textSize="@dimen/text_size_xsmall" 
+                android:visibility="gone"/>
+        </LinearLayout>
+</LinearLayout>

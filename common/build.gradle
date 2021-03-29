@@ -1,0 +1,65 @@
+apply plugin: 'com.android.library'
+apply plugin: 'org.greenrobot.greendao'
+
+android {
+    compileSdkVersion 25
+    buildToolsVersion "25.0.2"
+
+    defaultConfig {
+        minSdkVersion 18
+        targetSdkVersion 25
+        versionCode 1
+        versionName "1.0"
+
+        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+}
+
+greendao {
+    schemaVersion 1
+    daoPackage 'com.hayden.hap.common.dao'
+    targetGenDir 'src/main/java'
+}
+
+dependencies {
+    compile fileTree(include: ['*.jar'], dir: 'libs')
+    androidTestCompile('com.android.support.test.espresso:espresso-core:2.2.2', {
+        exclude group: 'com.android.support', module: 'support-annotations'
+    })
+    compile 'com.android.support:appcompat-v7:25.3.1'
+    testCompile 'junit:junit:4.12'
+    compile 'com.alibaba:fastjson:1.2.29'
+    //compile 'com.taobao.android:weex_sdk:0.10.0@aar'
+    // 图片加载框架
+    compile 'com.github.bumptech.glide:glide:3.7.0'
+    compile 'com.android.support:design:25.3.1'
+    // 网络框架 基于okhttp
+    compile 'com.squareup.retrofit2:retrofit:2.2.0'
+    // retrofit的json转换器
+    compile 'com.squareup.retrofit2:converter-gson:2.2.0'
+    // 加密工具使用的库
+    compile 'org.apache.commons:commons-lang3:3.5'
+    compile 'org.bouncycastle:bcprov-jdk15:1.43'
+    compile 'commons-codec:commons-codec:1.9'
+    // compile 'io.realm:android-adapters:2.0.0'
+    compile 'org.greenrobot:greendao:3.2.2'
+    compile 'com.github.yuweiguocn:GreenDaoUpgradeHelper:v1.3.0'
+    //自定义WXPageActivity中使用
+    //compile 'com.taobao.android:weex_inspector:0.10.0.5'
+    //本地图片加载adapter
+    compile 'com.nostra13.universalimageloader:universal-image-loader:1.9.5'
+    // facebook的调试库，用来调试网络连接和数据库
+    compile 'com.facebook.stetho:stetho:1.4.2'
+    compile 'com.facebook.stetho:stetho-okhttp3:1.4.2'
+    compile 'com.hayden.hap.hd_push:push_sdk:1.0.0-beta13'
+    compile project(':rmt-app-phone-res')
+    compile project(':rmt-common')
+
+}

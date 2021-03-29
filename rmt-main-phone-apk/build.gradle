@@ -1,0 +1,97 @@
+apply plugin: 'com.android.application'
+
+android {
+    compileSdkVersion 26
+    buildToolsVersion '26.0.2'
+    defaultConfig {
+        applicationId "com.hayden.hap.rmt.nx"
+        versionCode = 62
+        versionName = "02.20.1106"
+        minSdkVersion 20
+        targetSdkVersion 26
+        multiDexEnabled true
+        ndk{abiFilters "armeabi"}
+    }
+
+    compileOptions{
+        sourceCompatibility = 1.8
+        targetCompatibility = 1.8
+    }
+
+    buildTypes {
+        debug {
+            jniDebuggable true
+            debuggable true
+            multiDexEnabled true
+        }
+        release {
+            // 混淆
+//            minifyEnabled true
+            // Zipalign优化
+            zipAlignEnabled true
+//            // 移除无用的resource文件
+//            shrinkResources true
+//            // 前一部分代表系统默认的android程序的混淆文件，该文件已经包含了基本的混淆声明，后一个文件是自己的定义混淆文件
+//            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.txt'
+
+        }
+    }
+    //指定打包后应用名称
+//    applicationVariants.all { variant ->
+//        variant.outputs.each { output ->
+//            def outputFile = output.outputFile
+//            def fileName
+//            if (outputFile != null && outputFile.name.endsWith('.apk')) {
+//                if (variant.buildType.name.equals('release')) {
+//                    fileName = 'com.haydenzk.rmt_' + defaultConfig.versionName + '_nx.apk'
+//                } else if (variant.buildType.name.equals('debug')) {
+//                    fileName = 'com.haydenzk.rmt' + defaultConfig.versionName + '_nx.apk'
+//                }
+//                output.outputFile = new File(outputFile.parent, fileName)
+//            }
+//        }
+//    }
+
+    applicationVariants.all { variant ->
+        variant.outputs.all { output ->
+            def oldFile = output.outputFile
+            def fileName;
+            if (oldFile != null && oldFile.name.endsWith('.apk')) {
+                if (variant.buildType.name.equals('release')) {
+                    fileName = 'com.haydenzk.rmt_' + defaultConfig.versionName + '_nx.apk'
+                }
+                if (variant.buildType.name.equals('debug')) {
+                    fileName = 'com.haydenzk.rmt' + defaultConfig.versionName + '_nx.apk'
+                }
+                outputFileName = fileName
+            }
+        }
+    }
+
+}
+
+dependencies {
+    compile project(':rmt-scene-phone-app')
+    compile project(':rmt-common-module-phone')
+    compile project(':rmt-common-component-phone')
+    compile project(':rmt-app-phone-res')
+    compile project(':rmt-scw-phone-app')
+    compile project(':rmt-end-phone-app')
+    compile project(':rmt-wov-phone-app')
+    compile project(':rmt-main-phone-app')
+    compile project(':rmt-dc-phone-app')
+    compile project(':rmt-question-phone-app')
+    compile project(':common')
+    compile project(':rmt-assignstaff-phone-app')
+    compile project(':rmt-statistics-phone-app')
+    compile project(':rmt-leaderappr-phone-app')
+    //    compile 'com.android.support:multidex:1.0.+'
+//    compile 'com.android.support:design:25.3.1'
+    compile project(':rmt-delay-phone-app')
+    compile project(':rmt-pause-phone-app')
+    compile project(':rmt-resume-phone-app')
+    compile project(':rmt-authorize-phone-app')
+    compile project(':rmt-zsc-phone-app')
+
+}
+

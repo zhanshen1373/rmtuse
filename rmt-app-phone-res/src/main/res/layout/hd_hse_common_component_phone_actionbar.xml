@@ -1,0 +1,269 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/hd_hse_common_component_actionbar"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/hd_hse_common_component_phone_actionbar_background">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentLeft="true"
+        android:layout_centerVertical="true"
+        android:gravity="left|center_vertical"
+        android:orientation="horizontal">
+
+        <com.hd.hse.common.component.phone.drawerarrow.MaterialMenuView
+            android:id="@+id/hd_hse_common_phone_actionbar_custom_img_tv_more_left"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:background="@drawable/hd_common_component_phone_actionbar_item_selected"
+            android:visibility="gone"
+            app:mm_color="@android:color/white"
+            app:mm_scale="@integer/hd_common_component_phone_actionbar_drawer_icon_size"
+            app:mm_strokeWidth="1"
+            app:mm_transformDuration="1000" />
+
+        <ImageButton
+            android:id="@+id/hd_hse_common_phone_actionbar_custom_img_tv_back"
+            android:layout_width="@dimen/hd_common_component_phone_actionbar_heigh"
+            android:layout_height="match_parent"
+            android:layout_gravity="left|center_vertical"
+            android:background="@drawable/hd_common_component_phone_actionbar_item_selected"
+            android:clickable="true"
+            android:padding="@dimen/hd_common_component_phone_actionbar_control_padding"
+            android:src="@drawable/hd_hse_common_component_phone_actionbar_icon_back"
+            android:visibility="gone" />
+
+        <TextView
+            android:id="@+id/hd_hse_common_phone_actionbar_custon_subtitle"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_gravity="left|center_vertical"
+            android:background="@drawable/hd_common_component_phone_actionbar_item_selected"
+            android:clickable="true"
+            android:drawableRight="@drawable/hd_hse_common_phone_actionbar_custon_icon_subtitle"
+            android:gravity="center"
+            android:padding="@dimen/hd_common_component_phone_actionbar_textview_padding"
+            android:textColor="@color/hd_hse_common_component_phone_actionbar_font_white"
+            android:textSize="@dimen/text_size_large"
+            android:visibility="gone" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_centerInParent="true"
+        android:gravity="center"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/hd_hse_common_phone_actionbar_custom_title"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:background="@drawable/hd_common_component_phone_actionbar_item_selected"
+            android:clickable="false"
+            android:gravity="center"
+            android:maxWidth="@dimen/hd_hse_common_heading_maxWidth"
+            android:padding="@dimen/hd_common_component_phone_actionbar_textview_padding"
+            android:text="欢迎主页"
+            android:textColor="@color/hd_hse_common_component_phone_actionbar_font_white"
+            android:textSize="@dimen/hd_common_textsize"
+
+            android:visibility="gone" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:gravity="right|center_vertical"
+        android:orientation="horizontal">
+
+        <EditText
+            android:id="@+id/hd_hse_common_phone_actionbar_custom_img_et_search"
+            android:layout_width="0dp"
+            android:layout_height="@dimen/hd_common_component_phone_actionbar_editText_heigh"
+            android:layout_marginLeft="@dimen/hd_common_component_phone_actionbar_textview_padding"
+            android:layout_marginRight="@dimen/hd_common_component_phone_actionbar_textview_padding"
+            android:layout_weight="40"
+            android:background="@drawable/hd_hse_common_component_phone_search_et_style"
+            android:cursorVisible="true"
+            android:drawableLeft="@drawable/hd_hse_common_component_phone_icon_search_sel"
+            android:drawablePadding="@dimen/hd_common_component_phone_actionbar_textview_padding"
+            android:hint="@string/hd_hse_common_phone_button_search_tip"
+            android:inputType="text"
+            android:padding="@dimen/hd_common_component_phone_menubar_textview_padding"
+            android:textColor="@color/hd_hse_common_alerttext_black"
+            android:textColorHint="@color/hd_hse_common_component_phone_search_hint_font"
+            android:textCursorDrawable="@null"
+            android:textSize="@dimen/text_size_small"
+            android:textStyle="normal"
+            android:visibility="invisible" />
+
+        <TextView
+            android:id="@+id/hd_hse_common_phone_actionbar_custom_tv_canel"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_gravity="center"
+            android:layout_marginRight="@dimen/hd_common_component_phone_actionbar_textview_padding"
+            android:layout_weight="5"
+            android:background="@drawable/hd_common_component_phone_actionbar_item_selected"
+            android:clickable="true"
+            android:gravity="center"
+            android:text="取消"
+            android:textColor="@color/hd_hse_common_component_phone_actionbar_font_white"
+            android:textSize="@dimen/hd_common_textsize"
+            android:visibility="invisible" />
+
+        <TextView
+            android:id="@+id/hd_hse_common_phone_actionbar_custom_tv_sxtj"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_gravity="center"
+            android:layout_marginRight="@dimen/hd_common_component_phone_actionbar_textview_padding"
+            android:layout_weight="5"
+            android:background="@drawable/hd_common_component_phone_actionbar_item_selected"
+            android:clickable="true"
+            android:gravity="center"
+            android:text="筛选"
+            android:textColor="@color/hd_hse_common_component_phone_actionbar_font_white"
+            android:textSize="@dimen/hd_common_textsize"
+            android:visibility="gone" />
+
+        <ImageButton
+            android:id="@+id/hd_hse_common_phone_actionbar_custom_img_ibtn_search"
+            android:layout_width="@dimen/hd_common_component_phone_actionbar_heigh"
+            android:layout_height="match_parent"
+            android:layout_gravity="right|center_vertical"
+            android:background="@drawable/hd_common_component_phone_actionbar_item_selected"
+            android:paddingLeft="@dimen/hd_common_component_phone_actionbar_control_padding"
+            android:paddingRight="@dimen/hd_common_component_phone_actionbar_control_padding"
+            android:scaleType="center"
+            android:src="@drawable/hd_hse_common_component_phone_icon_search"
+            android:visibility="gone" />
+        <ImageButton
+            android:id="@+id/hd_hse_common_phone_actionbar_custom_img_ibtn_cancle"
+            android:layout_width="@dimen/hd_common_component_phone_actionbar_heigh"
+            android:layout_height="match_parent"
+            android:layout_gravity="right|center_vertical"
+            android:background="@drawable/hd_common_component_phone_actionbar_item_selected"
+            android:paddingLeft="@dimen/hd_common_component_phone_actionbar_control_padding"
+            android:paddingRight="@dimen/hd_common_component_phone_actionbar_control_padding"
+            android:scaleType="center"
+            android:src="@drawable/hd_hse_common_component_phone_item_icon_canel"
+            android:visibility="gone" />
+
+        <ImageButton
+            android:id="@+id/hd_hse_common_phone_actionbar_custom_img_ibtn_upload"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_gravity="right|center_vertical"
+            android:layout_weight="5"
+            android:background="@drawable/hd_common_component_phone_actionbar_item_selected"
+            android:paddingLeft="@dimen/hd_common_component_phone_actionbar_control_padding"
+            android:paddingRight="@dimen/hd_common_component_phone_actionbar_control_padding"
+            android:scaleType="center"
+            android:src="@drawable/hd_hse_main_phone_app_item_icon_upload"
+            android:visibility="gone" />
+
+        <ImageButton
+            android:id="@+id/hd_hse_common_phone_actionbar_custom_img_ibtn_dowmload"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_gravity="right|center_vertical"
+            android:layout_weight="5"
+            android:background="@drawable/hd_common_component_phone_actionbar_item_selected"
+            android:paddingLeft="@dimen/hd_common_component_phone_actionbar_control_padding"
+            android:paddingRight="@dimen/hd_common_component_phone_actionbar_control_padding"
+            android:scaleType="center"
+            android:src="@drawable/hd_hse_main_phone_app_item_icon_download"
+            android:visibility="gone" />
+
+        <ImageButton
+            android:id="@+id/hd_hse_common_phone_actionbar_custom_img_ibtn_delete"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_gravity="right|center_vertical"
+            android:layout_weight="5"
+            android:background="@drawable/hd_common_component_phone_actionbar_item_selected"
+            android:paddingLeft="@dimen/hd_common_component_phone_actionbar_control_padding"
+            android:paddingRight="@dimen/hd_common_component_phone_actionbar_control_padding"
+            android:scaleType="center"
+            android:src="@drawable/hd_hse_common_component_phone_actionbar_icon_delete"
+            android:visibility="gone" />
+
+        <ImageButton
+            android:id="@+id/hd_hse_common_phone_actionbar_custom_img_more_leveltwo"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_gravity="right|center_vertical"
+            android:layout_weight="5"
+            android:background="@drawable/hd_common_component_phone_actionbar_item_selected"
+            android:clickable="true"
+            android:paddingLeft="@dimen/hd_common_component_phone_actionbar_control_padding"
+            android:paddingRight="@dimen/hd_common_component_phone_actionbar_control_padding"
+            android:src="@drawable/hd_hse_common_component_phone_actionbar_icon_function"
+            android:visibility="gone" />
+
+        <FrameLayout
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_gravity="right|center_vertical">
+
+            <ImageButton
+                android:id="@+id/hd_hse_common_phone_actionbar_custom_img_tv_more"
+                android:layout_width="@dimen/hd_common_component_phone_actionbar_heigh"
+                android:layout_height="match_parent"
+                android:background="@drawable/hd_common_component_phone_actionbar_item_selected"
+                android:clickable="true"
+                android:paddingLeft="@dimen/hd_common_component_phone_actionbar_control_padding"
+                android:paddingRight="@dimen/hd_common_component_phone_actionbar_control_padding"
+                android:src="@drawable/hd_hse_common_component_phone_actionbar_icon_rightmore"
+                android:visibility="gone" />
+
+            <ImageView
+                android:id="@+id/hd_hse_common_phone_actionbar_custom_img_tv_remind"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="top|right"
+                android:layout_margin="@dimen/hd_common_component_phone_actionbar_control_padding"
+                android:contentDescription="@null"
+                android:src="@drawable/hd_hse_common_remind"
+                android:visibility="gone" />
+        </FrameLayout>
+
+        <Button
+            android:id="@+id/hd_hse_statistic_actionbar_bt_up"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_gravity="right|center_vertical"
+            android:background="@drawable/hd_common_component_phone_actionbar_item_selected"
+            android:clickable="true"
+            android:gravity="center"
+            android:paddingLeft="15dp"
+            android:paddingRight="15dp"
+            android:text="上传"
+            android:textColor="#ffffff"
+            android:textSize="@dimen/hd_common_textsize"
+            android:visibility="gone" />
+        <Button
+            android:id="@+id/hd_hse_statistic_actionbar_bt_edit"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_gravity="right|center_vertical"
+            android:background="@drawable/hd_common_component_phone_actionbar_item_selected"
+            android:clickable="true"
+            android:gravity="center"
+            android:paddingLeft="15dp"
+            android:paddingRight="15dp"
+            android:text="编辑"
+            android:textColor="#ffffff"
+            android:textSize="@dimen/hd_common_textsize"
+            android:visibility="gone" />
+    </LinearLayout>
+
+</RelativeLayout>

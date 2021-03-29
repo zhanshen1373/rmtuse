@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<TableRow xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_marginTop="3dp"
+    android:layout_marginBottom="3dp"
+    style="@style/hd_hse_common_module_phone_gases_check_row"
+	            >
+	
+    <Spinner
+        android:id="@+id/hd_hse_common_module_gases_check_concentration_row_spinner"
+        android:layout_column="1"
+        android:ems="10"
+        android:dropDownWidth="250dp"
+        android:gravity="center_vertical"
+        style="@style/hd_hse_common_module_phone_gases_check_col1"
+         />
+	
+    <EditText
+        style="@style/hd_hse_common_module_phone_gases_check_col2"
+        android:layout_column="2"
+        
+        android:ems="10"
+        android:inputType="numberDecimal"
+        android:id="@+id/hd_hse_common_module_gases_check_concentration_value_row_et"
+        >
+	</EditText>
+	            
+</TableRow>

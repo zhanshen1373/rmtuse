@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="org.hse.end.phone.app"
+    android:versionCode="1"
+    android:versionName="1.0.0">
+
+    <uses-sdk android:targetSdkVersion="19" />
+
+    <application
+        android:allowBackup="true"
+        android:theme="@style/AppTheme">
+        <activity
+            android:name="hd.hse.end.phone.ui.activity.TaskTabulationActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustResize"></activity>
+        <activity
+            android:name="hd.hse.end.phone.ui.activity.TaskTabulationActivityOnline"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustResize"></activity>
+
+        <activity
+            android:name="hd.hse.end.phone.ui.activity.EndTaskActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustResize">
+            <intent-filter>
+                <action android:name="ACTION_WORKTASK_END" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+    </application>
+
+</manifest>

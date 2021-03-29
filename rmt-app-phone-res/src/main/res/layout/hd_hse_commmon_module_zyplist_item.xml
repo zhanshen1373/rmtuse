@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="horizontal" >
+
+    <LinearLayout
+        android:layout_width="100dp"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:padding="@dimen/hd_hse_common_module_tv_padding" >
+
+        <TextView
+            android:id="@+id/hd_hse_common_module_tv_date"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:text="5月20日"
+            android:textColor="#365993"
+            android:textSize="18sp" />
+
+        <TextView
+            android:id="@+id/hd_hse_common_module_tv_time"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="5dp"
+            android:text="08:00"
+            android:textColor="#365993"
+            android:textSize="18sp" />
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/hd_hse_common_module_tv_divider"
+        android:layout_width="5dp"
+        android:layout_height="100dp"
+        android:background="#7cc4ed" />
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:gravity="center_vertical"
+        android:orientation="vertical"
+        android:padding="10dp" >
+
+        <TextView
+            android:id="@+id/hd_hse_common_module_tv_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:ellipsize="end"
+            android:maxLines="2"
+            android:text="作业名称"
+            android:textSize="@dimen/hd_hse_common_module_tv_namefontsize" />
+
+        <TextView
+            android:id="@+id/hd_hse_common_module_tv_region"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:ellipsize="end"
+            android:maxLines="1"
+            android:text="作业区域"
+            android:textSize="@dimen/hd_hse_common_module_tv_regionfontsize" />
+    </LinearLayout>
+
+</LinearLayout>

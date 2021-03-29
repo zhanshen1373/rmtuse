@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.hd.hse.common.module.phone"
+    android:versionCode="1"
+    android:versionName="1.0.1">
+
+    <uses-sdk android:targetSdkVersion="19" />
+
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.MOUNT_UNMOUNT_FILESYSTEMS" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+
+    <uses-feature android:name="android.hardware.camera" />
+    <uses-feature android:name="android.hardware.camera.autofocus" />
+
+    <application
+        android:name=".camera.MainApplication"
+        android:theme="@style/AppTheme">
+        <activity android:name=".camera.ErrorActivity"></activity>
+        <activity android:name=".ui.activity.FragmentSignActivity" />
+        <activity
+            android:name=".ui.activity.PhotoManagerActicity"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustResize" />
+        <activity
+            android:name=".ui.activity.ExamineActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:screenOrientation="portrait"
+            android:theme="@style/TranslucentStyle"
+            android:windowSoftInputMode="stateAlwaysHidden|adjustResize" />
+        <activity
+            android:name=".camera.CameraCaptureActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.activity.LocationSwCard"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:screenOrientation="portrait"
+            android:theme="@style/MyActivityDialogStyle"
+            android:windowSoftInputMode="adjustResize" />
+        <activity
+            android:name=".ui.activity.ReadCardExamineActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:screenOrientation="portrait"
+            android:theme="@style/TranslucentStyle"
+            android:windowSoftInputMode="adjustResize" />
+        <activity
+            android:name=".ui.activity.WorkOrderDetailActivity"
+            android:configChanges="keyboardHidden|orientation">
+
+            <!-- ACTION_WORKTASK_LL -->
+            <intent-filter>
+                <action android:name="ACTION_WORKTASK_LL" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".photo.preview.AlbumActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".photo.preview.AlbumPreviewActivity"
+            android:screenOrientation="portrait" /> <!-- com.hd.hse.common.module.phone.camera2.CameraActivity -->
+        <activity
+            android:name=".camera2.CameraActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.activity.WebActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.AppCompat"
+            android:windowSoftInputMode="adjustResize" />
+        <activity
+            android:name="com.hd.hse.common.module.branch.ui.model.activity.PaintSignatureActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:screenOrientation="portrait"
+            android:theme="@style/TranslucentStyle"
+            android:windowSoftInputMode="adjustResize" />
+        <activity
+            android:name=".ui.activity.PhotoPreviewActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:screenOrientation="portrait"
+            android:theme="@style/TranslucentStyle"
+            android:windowSoftInputMode="adjustResize" />
+        <activity
+            android:name="com.hd.hse.common.module.branch.ui.model.activity.CreateQrCodeActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateAlwaysHidden|adjustResize" />
+        <activity
+            android:name="com.hd.hse.common.module.branch.ui.model.activity.CancleWorkSubTaskActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateAlwaysHidden|adjustResize" />
+    </application>
+
+</manifest>

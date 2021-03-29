@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+          xmlns:tools = "http://schemas.android.com/tools"
+    package="com.hd.hse.main"
+    android:versionCode="7"
+    android:versionName="1.0.6" >
+
+    <uses-sdk android:targetSdkVersion="19" />
+
+
+    <!--MQTT消息推送-->
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.VIBRATE" />
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+
+
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.MOUNT_UNMOUNT_FILESYSTEMS" />
+    <uses-permission android:name="android.permission.CAMERA" />
+    <!-- 抓取系统启动事件 -->
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
+    <!-- 手机支持nfc -->
+    <uses-permission android:name="android.permission.NFC" />
+    <!-- 设置获取当前所有  Task的列表权限 -->
+    <uses-permission android:name="android.permission.GET_TASKS" />
+
+
+
+
+
+    <!-- Required  一些系统要求的权限，如访问网络等-->
+    <uses-permission android:name="com.hayden.hap.trn.permission.JPUSH_MESSAGE" />
+    <uses-permission android:name="android.permission.RECEIVE_USER_PRESENT" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <uses-permission android:name="android.permission.WRITE_SETTINGS" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+
+    <!-- Optional for location -->
+    <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW" /> <!-- 用于开启 debug 版本的应用在6.0 系统上 层叠窗口权限 -->
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.CHANGE_WIFI_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_LOCATION_EXTRA_COMMANDS" />
+    <uses-permission android:name="android.permission.CHANGE_NETWORK_STATE" />
+
+
+    <uses-feature
+        android:name="android.hardware.nfc"
+        android:required="true" />
+
+    <supports-screens
+        android:anyDensity="true"
+        android:largeScreens="true"
+        android:normalScreens="true"
+        android:smallScreens="true"
+        android:xlargeScreens="true" />
+
+    <application
+        android:name="com.hd.hse.common.module.phone.camera.MainApplication"
+        android:allowBackup="true"
+        android:icon="@drawable/hd_hse_phone_logo"
+        android:label="@string/hd_app_name"
+        android:theme="@style/AppTheme"
+        tools:replace="android:label"
+        >
+        <provider
+            android:name="android.support.v4.content.FileProvider"
+            android:authorities="com.hayden.hap.rmt.nx.fileprovider"
+            android:exported="false"
+            android:grantUriPermissions="true">
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/file_paths" />
+        </provider>
+
+        <activity
+            android:name="com.hd.hse.main.phone.ui.activity.welcome.StartWelcomeActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/MyAppTheme.NoActionBar"
+            android:windowSoftInputMode="adjustUnspecified|stateHidden">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <activity
+            android:name="com.hd.hse.main.phone.ui.activity.login.LoginActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.Login"
+            android:windowSoftInputMode="adjustUnspecified|stateHidden" >
+        </activity>
+
+        <receiver android:name="com.hd.hse.main.phone.ui.service.ConnectivityAlarmReceiver" >
+            <intent-filter>
+
+                <!-- 当网路状态发生变化时 触发的广播 -->
+                <action android:name="android.net.conn.CONNECTIVITY_CHANGE" />
+            </intent-filter>
+        </receiver>
+        <!--
+             <receiver android:name="com.hd.hse.main.phone.ui.receiver.ReceiverScreenOn" >
+            <intent-filter>
+
+                表示点击屏幕触发广播
+                <action android:name="android.intent.action.SCREEN_ON" />
+                表示点击电源键  解锁触发的广播
+				 <action android:name="android.intent.action.USER_PRESENT" />
+
+            </intent-filter>
+        </receiver>
+        -->
+        <receiver android:name="com.hd.hse.main.phone.ui.service.BootAlarmReceiver" >
+            <intent-filter>
+
+                <!-- 表示开机触发的广播 -->
+                <action android:name="android.intent.action.BOOT_COMPLETED" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </receiver>
+        <service android:name="com.hayden.hap.hd_push.sdk.PushService" />
+        <service android:name="org.eclipse.paho.android.service.MqttService" />
+        <service
+            android:name="com.hayden.hap.hd_push.sdk.RemoteService"
+            android:process=":remote" />
+    </application>
+
+</manifest>

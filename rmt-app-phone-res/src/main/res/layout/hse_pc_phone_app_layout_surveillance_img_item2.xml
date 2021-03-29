@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:id="@+id/hse_pc_phone_app_layout_surveillance_re"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <RelativeLayout
+            android:layout_width="101dp"
+            android:layout_height="101dp"
+            android:layout_centerInParent="true"
+            android:layout_margin="9dp"
+            android:background="@color/hd_hse_common_module_pop_bg">
+
+            <ImageView
+                android:id="@+id/hse_pc_phone_app_layout_surveillance_img_item_img"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:layout_centerInParent="true"
+                android:src="@drawable/hd_hse_photo_add" />
+
+            <ImageView
+                android:id="@+id/hse_pc_phone_app_layout_surveillance_img_item_img_dele"
+                android:layout_width="@dimen/hse_pc_phone_app_layout_surveillance_img_item_img_dele_size"
+                android:layout_height="@dimen/hse_pc_phone_app_layout_surveillance_img_item_img_dele_size"
+                android:layout_alignRight="@+id/hse_pc_phone_app_layout_surveillance_img_item_img"
+                android:src="@drawable/hd_common_message_error"
+                android:visibility="gone" />
+        </RelativeLayout>
+
+    </RelativeLayout>
+
+</LinearLayout>

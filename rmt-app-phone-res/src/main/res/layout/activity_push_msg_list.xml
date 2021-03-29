@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="?android:attr/actionBarSize"
+        android:background="@color/hd_hse_common_component_phone_actionbar_background" >
+
+        <ImageButton
+            android:id="@+id/ibtn_msg_list_back"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:background="@drawable/hd_common_component_phone_actionbar_item_selected"
+            android:padding="@dimen/hd_common_component_phone_actionbar_control_padding"
+            android:src="@drawable/hd_hse_common_component_phone_actionbar_icon_back" />
+
+        <TextView
+            android:id="@+id/tv_msg_list_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:padding="@dimen/hd_common_component_phone_actionbar_textview_padding"
+            android:text="消息列表"
+            android:textColor="@color/hd_hse_common_component_phone_actionbar_font_white"
+            android:textSize="@dimen/hd_common_textsize" />
+
+        <TextView
+            android:id="@+id/tv_msg_list_clear"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerInParent="true"
+            android:layout_marginRight="12dp"
+            android:padding="8dp"
+            android:clickable="true"
+            android:text="清除"
+            android:textColor="@color/hd_hse_common_component_phone_actionbar_font_white"
+            android:textSize="@dimen/hd_common_item_text_size" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/rlyt_msg_list_container"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+</LinearLayout>

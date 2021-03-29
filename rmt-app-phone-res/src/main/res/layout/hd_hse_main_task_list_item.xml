@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.hd.hse.common.module.phone.custom.SwipeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/swipe"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content" >
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" >
+
+        <!--<RelativeLayout-->
+            <!--android:id="@+id/rlyt_delete"-->
+            <!--android:layout_width="100dp"-->
+            <!--android:layout_height="100dp"-->
+            <!--android:background="#ff0000"-->
+            <!--android:clickable="true" >-->
+
+            <!--<View-->
+                <!--android:layout_width="50dp"-->
+                <!--android:layout_height="50dp"-->
+                <!--android:layout_centerInParent="true"-->
+                <!--android:background="@drawable/trash" />-->
+        <!--</RelativeLayout>-->
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="left|center_vertical"
+        android:orientation="horizontal" >
+
+        <CheckBox
+            android:id="@+id/hd_hse_main_task_checkbox"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="2"
+            android:gravity="center_vertical|left"
+            android:orientation="vertical"
+            android:padding="@dimen/padding_small" >
+
+            <TextView
+                android:id="@+id/hd_hse_main_task_date"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:text="6月8日"
+                android:textColor="@color/hd_hse_common_bule"
+                android:textSize="@dimen/text_size_medium"
+                android:textStyle="bold" >
+            </TextView>
+
+            <TextView
+                android:id="@+id/hd_hse_main_task_time"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:text="08:00 "
+                android:textColor="@color/hd_hse_common_bule"
+                android:textSize="@dimen/text_size_medium"
+                android:textStyle="bold" >
+            </TextView>
+        </LinearLayout>
+
+        <View
+            android:id="@+id/hd_hse_main_task_spit_line"
+            android:layout_width="5dp"
+            android:layout_height="match_parent"
+            android:background="@color/hd_hse_common_describetext_gray" />
+
+        <TextView
+            android:id="@+id/hd_hse_main_task_content"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="6"
+            android:ellipsize="end"
+            android:gravity="left"
+            android:maxLines="2"
+            android:padding="@dimen/padding_small"
+            android:text="描述"
+            android:textColor="@color/hd_hse_common_cancel_gray"
+            android:textSize="@dimen/text_size_xxsmall"
+            android:textStyle="bold" >
+        </TextView>
+    </LinearLayout>
+
+</com.hd.hse.common.module.phone.custom.SwipeLayout>

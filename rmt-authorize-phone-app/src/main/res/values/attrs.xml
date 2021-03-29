@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="OptionItemView">
+        <attr name="title" format="string" />
+        <attr name="desc" format="string" />
+        <attr name="start_src" format="reference|color" />
+        <attr name="end_src" format="reference|color" />
+        <attr name="show_image" format="boolean" />
+    </declare-styleable>
+</resources>

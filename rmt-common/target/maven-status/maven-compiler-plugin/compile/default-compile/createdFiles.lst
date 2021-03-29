@@ -1,0 +1,16 @@
+com\hd\hse\common\field\DBField.class
+com\hd\hse\common\logger\Log4jConfigurator.class
+com\hd\hse\common\table\DBTableInfo.class
+com\hd\hse\common\table\DBTableConfig.class
+com\hd\hse\common\field\DBFieldInfo.class
+com\hd\hse\common\exception\AppException.class
+com\hd\hse\common\entity\SuperEntity.class
+com\hd\hse\common\logger\LogUtils.class
+com\hd\hse\common\entity\EntityHelper$ReflectionInfo.class
+com\hd\hse\common\table\DBTableHelper.class
+com\hd\hse\common\entity\PropDescriptor.class
+com\hd\hse\common\entity\EntityHelper.class
+com\hd\hse\common\exception\DaoException.class
+com\hd\hse\common\exception\HDException.class
+com\hd\hse\common\exception\InterfaceException.class
+com\hd\hse\common\table\DBTable.class

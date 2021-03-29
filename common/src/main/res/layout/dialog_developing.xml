@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/text1"
+        style="@style/TextViewNomal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:padding="24dp"
+        android:text="正在开发中，敬请期待" />
+
+    <View
+        android:id="@+id/view2"
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        android:layout_below="@id/text1"
+        android:background="@color/colorSplitLine" />
+
+    <TextView
+        android:id="@+id/btnOk"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/view2"
+        android:gravity="center"
+        android:padding="12dp"
+        android:text="确定"
+        android:textColor="@color/colorAccent"
+        android:textSize="@dimen/text_size_normal" />
+</RelativeLayout>

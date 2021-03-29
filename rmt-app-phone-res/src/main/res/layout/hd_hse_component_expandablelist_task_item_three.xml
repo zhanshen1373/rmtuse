@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content" >
+    <!-- 文字描述+图标 -->
+    <ImageView
+        android:id="@+id/hd_hse_component_phone_grid_item_texticon_img"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:contentDescription="@null"
+        android:src="@drawable/hd_hse_common_module_zyp_type_linshiyongdian_normal"
+        android:layout_centerHorizontal="true" />
+    <ImageView
+        android:id="@+id/hd_hse_component_phone_grid_item_texticon_superscript"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:contentDescription="@null"
+        android:src="@drawable/hd_hse_common_module_zyp_state_wappr"
+        android:layout_alignLeft="@id/hd_hse_component_phone_grid_item_texticon_img"
+        android:layout_alignBottom="@id/hd_hse_component_phone_grid_item_texticon_img" />
+    <TextView
+        android:id="@+id/hd_hse_component_phone_grid_item_texticon_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:text="作业大票"
+        android:textSize="@dimen/text_size_xsmall"
+        android:layout_below="@id/hd_hse_component_phone_grid_item_texticon_img" />
+
+</RelativeLayout>

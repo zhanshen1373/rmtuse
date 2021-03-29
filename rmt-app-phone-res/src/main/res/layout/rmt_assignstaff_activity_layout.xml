@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/rmt_assignstaff_activity_layout_li_all"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/rmt_assignstaff_activity_layout_bt_all_select"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/margin_medium"
+            android:layout_marginLeft="2dp"
+            android:layout_marginRight="2dp"
+            android:layout_marginTop="@dimen/margin_medium"
+            android:layout_weight="1"
+            android:text="全选" />
+
+        <!--android:layout_margin="@dimen/margin_medium"-->
+
+
+        <!--<Button-->
+            <!--android:id="@+id/rmt_assignstaff_activity_layout_bt_sj"-->
+            <!--android:layout_width="0dp"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:layout_marginBottom="@dimen/margin_medium"-->
+            <!--android:layout_marginLeft="2dp"-->
+            <!--android:layout_marginRight="2dp"-->
+            <!--android:layout_marginTop="@dimen/margin_medium"-->
+            <!--android:layout_weight="1"-->
+            <!--android:text="送交" />-->
+
+        <Button
+            android:id="@+id/rmt_assignstaff_activity_layout_bt_assign"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/margin_medium"
+            android:layout_marginLeft="2dp"
+            android:layout_marginRight="2dp"
+            android:layout_marginTop="@dimen/margin_medium"
+            android:layout_weight="1"
+            android:text="人员指定" />
+
+        <rmt.assignstaff.phone.app.custom.ScrollButton
+            android:id="@+id/rmt_assignstaff_activity_layout_bt_wfFinish"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/margin_medium"
+            android:layout_marginLeft="2dp"
+            android:layout_marginRight="2dp"
+            android:layout_marginTop="@dimen/margin_medium"
+            android:layout_weight="1"
+            android:ellipsize="marquee"
+            android:marqueeRepeatLimit="marquee_forever"
+            android:singleLine="true"
+            android:text="设备员确认" />
+
+        <Button
+            android:id="@+id/rmt_assignstaff_activity_layout_bt_remove"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/margin_medium"
+            android:layout_marginLeft="2dp"
+            android:layout_marginRight="2dp"
+            android:layout_marginTop="@dimen/margin_medium"
+            android:layout_weight="1"
+            android:text="清除" />
+
+
+    </LinearLayout>
+
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/rmt_common_divider_height"
+        android:background="@color/hd_hse_common_module_phone_countersign_gray" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:paddingBottom="@dimen/padding_small"
+        android:paddingTop="@dimen/padding_small">
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:paddingBottom="@dimen/padding_medium"
+            android:paddingTop="@dimen/padding_medium"
+            android:text="选择"
+            android:textSize="@dimen/text_size_medium" />
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="3"
+            android:gravity="center"
+            android:paddingBottom="@dimen/padding_medium"
+            android:paddingTop="@dimen/padding_medium"
+            android:text="岗位"
+            android:textSize="@dimen/text_size_medium" />
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="3"
+            android:gravity="center"
+            android:paddingBottom="@dimen/padding_medium"
+            android:paddingTop="@dimen/padding_medium"
+            android:text="操作人"
+            android:textSize="@dimen/text_size_medium" />
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="2"
+            android:gravity="center"
+            android:paddingBottom="@dimen/padding_medium"
+            android:paddingTop="@dimen/padding_medium"
+            android:text="时间"
+            android:textSize="@dimen/text_size_medium" />
+
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/rmt_common_divider_height"
+        android:background="@color/hd_hse_common_module_phone_countersign_gray" />
+
+
+    <ListView
+        android:id="@+id/rmt_assignstaff_activity_layout_lv"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:divider="@color/hd_hse_common_module_phone_countersign_gray"
+        android:dividerHeight="@dimen/rmt_common_divider_height">
+
+    </ListView>
+
+</LinearLayout>

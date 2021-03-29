@@ -1,0 +1,2 @@
+INSERT INTO hse_sys_appmodule(code, name, resimg, resimgfocus,resimgpress,clickdealclass, layoutorder, enabled, tag, dr, type, modelnum, isswcard)
+ VALUES("rmt-statistics-phone-app","统计分析","hd_hse_nav_model_tjfx",null,null,"rmt.statistics.phone.app.event.homepage.StatisticsApp", 10, 1 ,0, 0, "ONLINE", "statistics", 0);

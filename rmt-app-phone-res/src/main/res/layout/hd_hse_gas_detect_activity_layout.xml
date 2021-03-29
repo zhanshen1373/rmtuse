@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical" >
+
+        <Button
+            android:id="@+id/add_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="right"
+            android:layout_margin="10dp"
+            android:background="@drawable/hd_hse_common_component_bottom_btn_bg"
+            android:padding="10dp"
+            android:text="新增数据"
+            android:textColor="@color/hd_hse_common_white"
+            android:textSize="@dimen/text_size_small" />
+
+        <!-- 新增布局 -->
+
+        <LinearLayout
+            android:id="@+id/add_view"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" >
+
+            <!-- 检测位置 -->
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:orientation="horizontal" >
+
+                <TextView
+                    style="@style/hd_hse_common_module_phone_gases_check_left_title"
+                    android:layout_gravity="center_vertical"
+                    android:text="检测位置：" />
+
+                <EditText
+                    android:id="@+id/addr_edit"
+                    style="@style/hd_hse_common_module_phone_gases_check_right_content" />
+            </LinearLayout>
+
+            <!-- 检测时间 -->
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:orientation="horizontal" >
+
+                <TextView
+                    style="@style/hd_hse_common_module_phone_gases_check_left_title"
+                    android:layout_gravity="center_vertical"
+                    android:text="检测时间：" />
+
+                <TextView
+                    android:id="@+id/time_txt"
+                    style="@style/hd_hse_common_module_phone_gases_check_right_content"
+                    android:text="1970-01-01 00:00:00" />
+            </LinearLayout>
+
+            <!-- 检测浓度 -->
+
+            <com.hd.hse.common.component.phone.custom.ExpandListView
+                android:id="@+id/concentration_listview"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:divider="#00000000"
+                android:dividerHeight="0dip" />
+
+            <!-- 是否合格 -->
+
+
+            <!-- <LinearLayout -->
+            <!-- android:layout_width="match_parent" -->
+            <!-- android:layout_height="wrap_content" -->
+            <!-- android:layout_marginTop="10dp" -->
+            <!-- android:orientation="horizontal" > -->
+
+
+            <!-- <TextView -->
+            <!-- style="@style/hd_hse_common_module_phone_gases_check_left_title" -->
+            <!-- android:layout_gravity="center_vertical" -->
+            <!-- android:text="是否合格：" /> -->
+
+
+            <!-- <TextView -->
+            <!-- android:id="@+id/isok_txt" -->
+            <!-- style="@style/hd_hse_common_module_phone_gases_check_right_content" -->
+            <!-- android:layout_width="wrap_content" -->
+            <!-- android:background="@null" -->
+            <!-- android:text="" /> -->
+            <!-- </LinearLayout> -->
+
+            <Button
+                android:id="@+id/save_btn"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+            android:background="@drawable/hd_hse_common_component_bottom_btn_bg"
+            android:layout_margin="10dp"
+            android:textColor="@color/hd_hse_common_white"
+                android:text="保  存" />
+        </LinearLayout>
+
+        <!-- 历史记录布局 -->
+
+        <RelativeLayout
+            android:id="@+id/history_viewpager_parent_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="20dp"
+            android:layout_marginTop="20dp" >
+
+            <!-- 右边内容部分 -->
+
+            <com.hd.hse.common.component.phone.custom.WrapContentHeightViewPager
+                android:id="@+id/hd_hse_common_module_table_content"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+            <!-- android:background="#e8f8ff" -->
+
+
+            <!-- Indictor -->
+
+            <RadioGroup
+                android:id="@+id/hd_hse_common_module_radio_group"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignEnd="@id/hd_hse_common_module_table_content"
+                android:layout_alignStart="@id/hd_hse_common_module_table_content"
+                android:layout_below="@id/hd_hse_common_module_table_content"
+                android:gravity="center"
+                android:orientation="horizontal" >
+            </RadioGroup>
+        </RelativeLayout>
+    </LinearLayout>
+
+</ScrollView>

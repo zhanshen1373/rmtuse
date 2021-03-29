@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="horizontal"
+    android:focusable="true"  
+   	android:focusableInTouchMode="true"
+   	android:padding="10dp"
+   	android:background="#ffffff"
+     >
+    
+    <RelativeLayout 
+        android:layout_height="wrap_content"
+        android:layout_width="wrap_content"
+        android:layout_gravity="center_vertical"
+        android:layout_marginRight="10dp"
+        android:id="@+id/hd_hse_end_phone_select"
+        >
+        <ImageView
+            android:id="@+id/hd_hse_end_phone_icon_iv" 
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            android:src="@drawable/hd_hse_common_module_zyp_state_appr"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="5dp"
+            android:layout_marginLeft="7dp"
+            />
+        
+        <TextView
+            android:id="@+id/hd_hse_end_phone_name_tv"
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content" 
+            android:text="动火作业"
+            android:layout_centerHorizontal="true"
+            android:layout_below="@id/hd_hse_end_phone_icon_iv"
+            />
+        
+        <ImageView
+            android:id="@+id/hd_hse_end_phone_select_icon"
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content" 
+            android:layout_alignParentTop="true"
+            android:layout_alignParentLeft="true"
+            android:visibility="invisible"
+            
+            android:background="@drawable/hd_hse_common_module_zyplist_selected"
+            />
+    </RelativeLayout>
+    
+    <TableLayout 
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        android:layout_gravity="center_vertical"
+        android:gravity="center"
+        
+        android:stretchColumns="2"
+        >
+        
+        <TableRow
+            android:orientation="horizontal"
+            android:layout_marginBottom="5dp"
+            >
+            
+            <TextView
+                android:id="@+id/hd_hse_end_phone_end_reason_title_tv"
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content"
+                android:text="原因" 
+                android:gravity="right"
+                android:textSize="18sp"
+                android:layout_marginRight="10dp"
+                />
+            
+            <TextView
+                android:id="@+id/hd_hse_end_phone_end_reason_value_tv"
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content"
+                android:text="请选择"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                android:padding="3dp"
+				                
+                />
+           <!--  android:background="@drawable/hd_hse_common_edit_nocorners_style" -->
+            <TextView
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content"
+                 
+                />
+            
+            <ImageView
+                android:id="@+id/hd_hse_end_phone_end_reason_btn"
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content"
+                android:src="@drawable/hd_hse_osc_phone_invalid_ib_touch_style"
+                />
+            
+        </TableRow>
+        
+        <TableRow 
+            android:orientation="horizontal"
+            
+            >
+            
+             <TextView
+                android:id="@+id/hd_hse_end_phone_end_description_title_tv"
+                android:layout_height="match_parent"
+                android:layout_width="wrap_content"
+                android:text="说明" 
+                android:gravity="right|top"
+                android:layout_gravity="top"
+                android:layout_marginRight="10dp"
+                 android:textSize="18sp"
+                 
+                />
+            
+            <EditText 
+                android:id="@+id/hd_hse_end_phone_des_et"
+                android:layout_height="wrap_content"
+                android:layout_width="180dp"
+                android:minLines="2"
+                 android:textSize="18sp"
+                 android:padding="2dp"
+                 android:gravity="left|top"
+                 android:layout_span="2"
+                 android:maxLines="3"
+                android:background="@drawable/hd_hse_common_edit_nocorners_style"
+                />
+        </TableRow>
+        
+    </TableLayout>
+
+</LinearLayout>

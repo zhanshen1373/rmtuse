@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:layout_marginLeft="@dimen/margin_large"
+        android:layout_marginRight="@dimen/margin_large"
+        android:background="@drawable/hd_hse_common_corner_back"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/rmt_common_component_paint_signature_button_height">
+
+            <TextView
+                android:id="@+id/rmt_common_component_paint_signature_tv_fzr"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="@dimen/margin_medium"
+                android:gravity="center"
+                android:text="现场负责人：张三"
+                android:textSize="@dimen/text_size_medium" />
+
+            <Button
+                android:id="@+id/rmt_common_component_paint_signature_bt_save"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_alignParentRight="true"
+                android:background="@android:color/transparent"
+                android:text="保存" />
+
+            <Button
+                android:id="@+id/rmt_common_component_paint_signature_bt_clear"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_toLeftOf="@+id/rmt_common_component_paint_signature_bt_save"
+                android:background="@android:color/transparent"
+                android:text="清空" />
+        </RelativeLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/rmt_common_divider_height"
+            android:background="@color/hd_hse_common_module_pop_divider"></View>
+
+        <com.hd.hse.common.component.phone.custom.PaintView
+            android:id="@+id/paintview"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/rmt_common_component_paint_signature_paint_height"
+            android:layout_margin="2dp" />
+
+
+        <LinearLayout
+            android:id="@+id/rmt_common_component_paint_signature_li_imglist"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/rmt_common_divider_height"
+                android:background="@color/hd_hse_common_module_pop_divider"></View>
+
+            <com.hd.hse.common.module.phone.custom.HorizontalListView
+                android:id="@+id/rmt_common_component_paint_signature_hlv"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/rmt_common_component_paint_signature_hlv_height">
+
+            </com.hd.hse.common.module.phone.custom.HorizontalListView>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/rmt_common_divider_height"
+                android:background="@color/hd_hse_common_module_pop_divider"></View>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/rmt_common_component_paint_signature_re_bottom"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/rmt_common_component_paint_signature_button_height"
+            android:layout_alignParentBottom="true"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/rmt_common_component_paint_signature_bt_cancle"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@drawable/hd_hse_common_bt_left_selector"
+                android:text="返回" />
+
+            <View
+                android:layout_width="@dimen/rmt_common_divider_height"
+                android:layout_height="match_parent"
+                android:background="@color/hd_hse_common_module_pop_divider"></View>
+
+            <Button
+                android:id="@+id/rmt_common_component_paint_signature_bt_entrue"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_alignParentRight="true"
+                android:layout_weight="1"
+                android:background="@drawable/hd_hse_common_bt_right_selector"
+                android:text="确定"
+                android:textColor="#FDA531" />
+
+
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+
+</RelativeLayout>

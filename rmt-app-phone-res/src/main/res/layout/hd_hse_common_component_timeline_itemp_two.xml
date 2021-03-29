@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FFFFFF"
+    android:gravity="center_vertical"
+    android:minHeight="50dp" >
+
+    <FrameLayout
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent" >
+
+        <TextView
+            android:id="@+id/hd_hse_component_timeline_line_top"
+            android:layout_width="5dip"
+            android:layout_height="fill_parent"
+            android:layout_gravity="center"
+            android:background="@color/yellow" />
+
+        <ImageView
+            android:id="@+id/hd_hse_component_timeline_iconnull"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="5dp"
+            android:contentDescription="@string/app_name"
+            android:src="@drawable/hd_hse_common_component_timeline_null" >
+        </ImageView>
+    </FrameLayout>
+
+    <LinearLayout
+        android:id="@+id/hd_hse_component_timeline_itemlIneid"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center_vertical" 
+        android:background="@drawable/hd_common_text_selector">
+
+        <TextView
+            android:id="@+id/action_name"
+            android:layout_width="@dimen/hd_hse_common_component_timeline_people_with"
+            android:layout_height="wrap_content"
+            android:paddingRight="10dp"
+            android:textColor="@color/hd_hse_common_describetext_gray"
+            android:textSize="@dimen/hd_common_item_title_text_size" >
+        </TextView>
+
+        <TextView
+            android:id="@+id/action_time"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingRight="2dp"
+            android:textColor="@color/hd_hse_common_describetext_gray"
+            android:textSize="@dimen/hd_common_item_title_text_size">
+        </TextView>
+    </LinearLayout>
+
+</LinearLayout>

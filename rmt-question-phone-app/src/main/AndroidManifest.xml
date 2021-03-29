@@ -1,0 +1,41 @@
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="rmt.question.phone.app">
+
+    <uses-sdk android:targetSdkVersion="19" />
+    <application
+        android:allowBackup="true"
+        android:theme="@style/AppTheme"
+        >
+        <activity
+            android:name="rmt.question.phone.app.activity.QuestionListActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateAlwaysHidden|adjustResize"></activity>
+        <activity
+            android:name="rmt.question.phone.app.activity.QuestionRegistrationActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateAlwaysHidden|adjustResize"></activity>
+        <activity
+            android:name="rmt.question.phone.app.activity.TaskTabulationActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateAlwaysHidden|adjustResize"></activity>
+
+        <activity
+            android:name="rmt.question.phone.app.activity.TermContentSelectorActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateAlwaysHidden|adjustResize"></activity>
+
+        <activity
+            android:name="rmt.question.phone.app.activity.TermTypeSelectorActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateAlwaysHidden|adjustResize"></activity>
+
+
+    </application>
+
+</manifest>

@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent">
+
+    <TextView
+        android:id="@+id/hd_hse_option_tv01"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:layout_alignParentLeft="true"
+        android:padding="@dimen/padding_large"
+        android:textSize="@dimen/text_size_small"
+        android:gravity="left|center_vertical"
+        />
+</LinearLayout>

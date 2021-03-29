@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/hd_hse_common_item_bg" >
+    <TextView
+        android:id="@+id/hd_hse_compontent_expandablelist_task_one_ionc_id"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="5dp"
+        android:layout_marginTop="5dp"
+        android:minWidth="20dp" />
+    <!-- 效率比线性布局高 -->
+    <LinearLayout
+        android:id="@+id/hd_hse_compontent_expandablelist_task_one_line_id"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_toRightOf="@id/hd_hse_compontent_expandablelist_task_one_ionc_id"
+        android:orientation="vertical"
+        android:padding="5dp" >
+        <RelativeLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content" >
+            <TextView
+                android:id="@+id/hd_hse_compontent_expandablelist_task_one_time"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:maxWidth="300dp"
+                android:minWidth="200dp"
+                android:text="2015-07-17"
+                android:textSize="@dimen/hd_common_item_title_text_size" />
+            <TextView
+                android:id="@+id/hd_hse_compontent_expandablelist_task_one_state"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="10dp"
+                android:layout_toRightOf="@id/hd_hse_compontent_expandablelist_task_one_time"
+                android:gravity="right"
+                android:text="作业中"
+                android:textSize="@dimen/hd_common_item_title_text_size" />
+        </RelativeLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" >
+            <TextView
+                android:id="@+id/hd_hse_compontent_expandablelist_task_one_name"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="2"
+                android:text="2015-07-17"
+                android:textSize="@dimen/hd_common_item_title_text_size" />
+            <TextView
+                android:id="@+id/hd_hse_compontent_expandablelist_task_one_dep"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="10dp"
+                android:layout_weight="1"
+                android:gravity="right"
+                android:text="化肥一厂化肥一厂化肥一厂"
+                android:textSize="@dimen/hd_common_item_title_text_size" />
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal" >
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="作业区域:"
+                android:textSize="@dimen/hd_common_item_title_text_size" />
+            <TextView
+                android:id="@+id/hd_hse_compontent_expandablelist_task_one_area"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="作业中"
+                android:textSize="@dimen/hd_common_item_title_text_size" />
+        </LinearLayout>
+        <TextView
+            android:id="@+id/hse_common_module_phone_grid_item_end_work_task"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingBottom="10dp"
+            android:paddingTop="10dp"
+            android:layout_marginRight="10dp"
+            android:clickable="false"
+            android:drawableRight="@drawable/hd_hse_common_module_zyplist_group_indicator_right"
+            android:focusable="false"
+            android:focusableInTouchMode="false"
+            android:gravity="center"
+            android:text="结束主任务"
+            android:textSize="@dimen/hd_common_item_title_text_size"
+            android:layout_gravity="right"/>
+    </LinearLayout>
+
+</RelativeLayout>

@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector xmlns:android="http://schemas.android.com/apk/res/android" >
+   <!-- <item android:state_pressed="true" android:color="@color/hd_hse_common_cancel_gray"></item>
+    <item android:color="#000000"></item> -->
+    
+      <!-- 焦点状态为绿色。 -->
+    <item android:drawable="@color/yellow" android:state_focused="true"></item>
+    <item android:drawable="@color/yellow" android:state_selected="true"></item>
+    <!-- 点击时为红色 -->
+    <item android:drawable="@color/hd_hse_common_cancel_gray" android:state_pressed="true"></item>
+
+    <!-- 默认下为white -->
+    <item android:drawable="@android:color/background_light"></item>
+</selector>

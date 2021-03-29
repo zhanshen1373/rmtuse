@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.hd.hse.common.module.phone.photo.preview.HackyViewPager xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/photot_preview_vp"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#000000" />

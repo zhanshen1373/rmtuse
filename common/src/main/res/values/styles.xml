@@ -1,0 +1,55 @@
+<resources>
+
+    <!-- Base application theme. -->
+    <style name="MyAppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+    </style>
+
+    <style name="AppTheme.Login" parent="MyAppTheme.NoActionBar">
+        <item name="colorPrimaryDark">#22000000</item>
+    </style>
+
+    <style name="MyAppTheme.NoActionBar">
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+    </style>
+
+    <style name="AppTheme.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar" />
+
+    <style name="AppTheme.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />
+
+    <style name="CustomCheckboxTheme" parent="@android:style/Widget.CompoundButton.CheckBox">
+        <item name="android:button">@drawable/checkbox_style</item>
+    </style>
+
+    <style name="EditTextHistoryCheckboxTheme" parent="@android:style/Widget.CompoundButton.CheckBox">
+        <item name="android:button">@drawable/edittext_history_checkbox_style</item>
+    </style>
+
+    <style name="LookPasswordCheckboxTheme" parent="@android:style/Widget.CompoundButton.CheckBox">
+        <item name="android:button">@drawable/look_password_checkbox_style</item>
+    </style>
+
+    <style name="TextViewNomal">
+        <item name="android:textSize">16sp</item>
+        <item name="android:textColor">@color/text_black</item>
+    </style>
+
+    <style name="TextViewSmall">
+        <item name="android:textSize">12sp</item>
+        <item name="android:textColor">@color/text_black</item>
+    </style>
+
+    <style name="TextViewInfo">
+        <item name="android:textSize">16sp</item>
+        <item name="android:textColor">@color/text_gray_light</item>
+    </style>
+
+    <style name="TextViewMsg">
+        <item name="android:textSize">12sp</item>
+        <item name="android:textColor">@color/text_gray_dark</item>
+    </style>
+</resources>

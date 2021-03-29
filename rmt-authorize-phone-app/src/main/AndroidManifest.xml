@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="rmt.authorize.phone.app">
+
+    <application>
+        <activity android:name=".activity.WorkAuthorizeMessageActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/App"></activity>
+        <!-- <activity -->
+        <!-- android:name=".activity.BarActivity" -->
+        <!-- android:theme="@style/App"></activity> -->
+        <activity
+            android:name=".activity.BSHRActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/App" />
+        <activity
+            android:name=".activity.WorkAuthorizeDetailActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/App" />
+        <activity
+            android:name=".activity.WorkAuthorizeActivity"
+            android:screenOrientation="portrait" />
+    </application>
+
+</manifest>

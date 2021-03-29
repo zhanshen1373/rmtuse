@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:clickable="true">
+
+    <!-- 图标为了在上方给标志提供空间，所以配置了 marginTop 文字描述 -->
+    <RelativeLayout
+        android:id="@+id/hd_hse_component_phone_grid_item_top"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_toLeftOf="@+id/hd_hse_component_phone_grid_item_li">
+
+        <TextView
+            android:id="@+id/hd_hse_component_phone_grid_item_itemtext"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp"
+            android:layout_marginLeft="@dimen/hd_hse_common_phone_tasklist_item_two_left"
+            android:layout_marginTop="10dp"
+            android:clickable="false"
+            android:drawableLeft="@drawable/hd_hse_common_component_warning"
+            android:focusable="false"
+            android:focusableInTouchMode="false"
+            android:gravity="center"
+            android:textSize="@dimen/hd_common_item_text_size" />
+
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/hd_hse_component_phone_grid_item_recyclerviewid"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/hd_hse_component_phone_grid_item_itemtext"
+
+            android:background="@color/hd_hse_common_white"
+            android:clickable="false"
+            android:descendantFocusability="blocksDescendants"
+            android:focusable="false"
+            android:paddingTop="2dp"></android.support.v7.widget.RecyclerView>
+
+    </RelativeLayout>
+
+
+    <!-- 作业票的状态标示 -->
+
+    <LinearLayout
+        android:id="@+id/hd_hse_component_phone_grid_item_li"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:padding="@dimen/padding_small">
+
+        <CheckBox
+            android:id="@+id/hd_hse_component_phone_grid_item_checkbox"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:clickable="false"
+            android:focusable="false" />
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/hse_common_module_phone_grid_item_state"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/hd_hse_component_phone_grid_item_top"
+        android:layout_marginBottom="10dp"
+        android:layout_marginLeft="@dimen/hd_hse_common_phone_tasklist_item_two_left"
+        android:textSize="@dimen/hd_common_item_text_size" />
+
+    <TextView
+        android:id="@+id/hse_common_module_phone_grid_item_look_detail"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_below="@+id/hd_hse_component_phone_grid_item_top"
+        android:layout_marginBottom="10dp"
+        android:layout_marginRight="10dp"
+        android:clickable="false"
+        android:drawableRight="@drawable/hd_hse_common_module_zyplist_group_indicator_right"
+        android:focusable="false"
+        android:focusableInTouchMode="false"
+        android:gravity="center"
+        android:text="查看任务"
+        android:textSize="@dimen/hd_common_item_text_size" />
+
+</RelativeLayout>

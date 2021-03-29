@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.hd.hse.wov.phone"
+    android:versionCode="1"
+    android:versionName="1.0.0-SNAPSHOT">
+
+    <uses-sdk android:targetSdkVersion="19" />
+
+    <application
+        android:allowBackup="true"
+        android:theme="@style/AppTheme">
+        <activity android:name=".ui.activity.worktask.TaskTabulationOrganizeActivity"></activity>
+        <activity
+            android:name=".ui.activity.worktask.TaskTabulationActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustResize"></activity>
+        <activity
+            android:name=".ui.activity.worktask.TaskTabulationActivityOnline"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustResize">
+            <intent-filter>
+                <action android:name="ACTION_WORKTASK_ONLINELL" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".ui.activity.worktask.WovTaskActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustResize"></activity>
+    </application>
+
+</manifest>

@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content" >
+
+    <ImageView
+        android:layout_marginLeft="8dp"
+        android:id="@+id/iv_step_dialog_arrow_left"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_centerVertical="true"
+        android:padding="12dp"
+        android:src="@drawable/arrow_left_step" />
+
+    <ImageView
+        android:layout_marginRight="8dp"
+        android:id="@+id/iv_step_dialog_arrow_right"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:padding="12dp"
+        android:src="@drawable/arrow_right_step" />
+
+    <include
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_toLeftOf="@id/iv_step_dialog_arrow_right"
+        android:layout_toRightOf="@id/iv_step_dialog_arrow_left"
+        layout="@layout/hd_hse_common_component_step_dialog_content_center" />
+
+</RelativeLayout>

@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="horizontal"
+    android:paddingBottom="5dp" >
+
+    <TextView
+        android:id="@+id/title"
+        style="@style/hd_hse_common_module_phone_gases_check_left_title"
+        android:text="检测浓度：" />
+
+    <Spinner
+        android:id="@+id/spinner"
+        style="@style/hd_hse_common_module_phone_gases_check_col1"
+        android:ems="10"
+        android:singleLine="true" />
+
+    <!-- android:dropDownWidth="250dp" -->
+
+    <EditText
+        android:id="@+id/value"
+        style="@style/hd_hse_common_module_phone_gases_check_col2"
+        android:inputType="numberDecimal"
+        android:singleLine="true" />
+
+</LinearLayout>

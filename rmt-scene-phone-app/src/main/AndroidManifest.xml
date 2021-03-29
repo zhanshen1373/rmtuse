@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools = "http://schemas.android.com/tools"
+    package="org.hse.scene.phone.app"
+    android:versionCode="1"
+    android:versionName="1.0.0" >
+
+    <uses-sdk android:targetSdkVersion="19" />
+
+    <application
+        android:allowBackup="true"
+        android:theme="@style/AppTheme"
+        >
+        <activity
+            android:name="com.hd.hse.scene.phone.ui.activity.TaskTabulationActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustResize" >
+        </activity>
+         <activity
+            android:name="com.hd.hse.scene.phone.ui.activity.SceneTaskActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustPan">
+        </activity>
+         <activity
+            android:name="com.hd.hse.scene.phone.ui.activity.GasDetectListActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustResize" >
+        </activity>
+         <activity
+            android:name="com.hd.hse.scene.phone.ui.activity.GasDetectActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustResize" >
+        </activity>
+         <activity
+            android:name="com.hd.hse.scene.phone.ui.activity.TempEleChoiceListActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustResize" >
+        </activity>
+        <activity
+            android:name="com.hd.hse.scene.phone.ui.activity.ReTaskTabulationActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustResize" >
+        </activity>
+    </application>
+
+</manifest>

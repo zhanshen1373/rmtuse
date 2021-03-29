@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/rmt_signactivity_layout_re_parent"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:visibility="invisible">
+
+    <LinearLayout
+        android:id="@+id/rmt_signactivity_layout_li_bottom"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true">
+
+        <Button
+            android:id="@+id/rmt_signactivity_layout_bt_clear"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="清空" />
+
+        <Button
+            android:id="@+id/rmt_signactivity_layout_bt_up"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="上传" />
+
+    </LinearLayout>
+
+    <com.hd.hse.common.component.phone.custom.PaintView
+        android:id="@+id/rmt_signactivity_layout_paintview"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/rmt_signactivity_layout_li_bottom" />
+
+
+</RelativeLayout>

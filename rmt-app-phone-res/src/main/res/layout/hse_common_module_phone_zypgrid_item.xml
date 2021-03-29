@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:clickable="true"
+     >
+	
+    <!-- 图标为了在上方给标志提供空间，所以配置了 marginTop -->
+    <TextView
+        android:id="@+id/hse_common_module_phone_grid_item_icon"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:clickable="false"
+        
+        android:focusableInTouchMode="false"
+        android:focusable="false"
+        android:layout_centerHorizontal="true"
+        android:background="@drawable/hd_hse_phone_logo"
+        android:layout_marginBottom="5dp"
+         />
+
+    <!-- 文字描述 -->
+    <TextView
+        android:id="@+id/hse_common_module_phone_grid_item_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:clickable="false"
+        android:textSize="@dimen/text_size_small"
+        android:focusableInTouchMode="false"
+        android:focusable="false"
+        android:singleLine="true"
+        android:ellipsize="end"
+        android:layout_below="@+id/hse_common_module_phone_grid_item_icon"
+        android:layout_centerHorizontal="true"
+        android:text="作业大票" />
+
+    <!-- 状态标示 -->
+    <TextView
+        android:id="@+id/hse_common_module_phone_grid_item_state"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:clickable="false"
+        android:focusableInTouchMode="false"
+        android:focusable="false"
+        android:background="@drawable/hd_hse_common_module_zyplist_selected"
+        android:layout_alignTop="@id/hse_common_module_phone_grid_item_icon"
+        android:layout_alignRight="@id/hse_common_module_phone_grid_item_icon"
+        
+        android:visibility="invisible"/>
+    
+     <!-- 作业票的状态标示 -->
+    <TextView
+        android:id="@+id/hse_common_module_phone_grid_item_workorder_state"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:clickable="false"
+        android:focusableInTouchMode="false"
+        android:focusable="false"
+        android:background="@drawable/hd_hse_common_module_zyplist_selected"
+        android:layout_alignBottom="@id/hse_common_module_phone_grid_item_icon"
+        android:layout_alignLeft="@id/hse_common_module_phone_grid_item_icon"
+       />
+
+</RelativeLayout>

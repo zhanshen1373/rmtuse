@@ -1,0 +1,603 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/hse_pc_phone_app_layout_surveillance_li_all"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/white"
+    android:orientation="vertical"
+    android:visibility="gone">
+
+    <com.hd.hse.common.module.phone.custom.HorizontalListView
+        android:id="@+id/hse_pc_phone_app_layout_surveillance_lv"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/hse_pc_phone_app_layout_surveillance_padding"></com.hd.hse.common.module.phone.custom.HorizontalListView>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/rmt_common_divider_height"
+        android:background="@color/hd_hse_common_btn_bg_gray" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:padding="@dimen/hse_pc_phone_app_layout_surveillance_padding">
+
+            <!-- 检查单位 -->
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/hse_pc_phone_app_layout_surveillance_item_height"
+                android:layout_marginBottom="@dimen/hse_pc_phone_app_layout_surveillance_item_marginbottom">
+
+                <TextView
+                    android:layout_width="@dimen/hse_pc_phone_app_layout_surveillance_item_textview_width"
+                    android:layout_height="match_parent"
+                    android:gravity="center_vertical"
+                    android:text="检查人单位"
+                    android:textColor="@color/hd_hse_common_describetext_gray"
+                    android:textSize="@dimen/hd_common_textsize" />
+
+                <EditText
+                    android:id="@+id/hse_pc_phone_app_layout_surveillance_ed_organization"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/hd_common_edittext_bg"
+                    android:editable="false"
+                    android:gravity="center_vertical"
+                    android:paddingLeft="@dimen/hse_pc_phone_app_layout_surveillance_item_edittext_paddinglefght"
+                    android:textColor="@color/hd_hse_common_component_phone_fontnum"
+                    android:textSize="@dimen/hd_common_textsize" />
+            </LinearLayout>
+            <!-- 检查人 -->
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/hse_pc_phone_app_layout_surveillance_item_height"
+                android:layout_marginBottom="@dimen/hse_pc_phone_app_layout_surveillance_item_marginbottom">
+
+                <TextView
+                    android:layout_width="@dimen/hse_pc_phone_app_layout_surveillance_item_textview_width"
+                    android:layout_height="match_parent"
+                    android:gravity="center_vertical"
+                    android:text="检查人"
+                    android:textColor="@color/hd_hse_common_describetext_gray"
+                    android:textSize="@dimen/hd_common_textsize" />
+
+                <TextView
+                    android:id="@+id/hse_pc_phone_app_layout_surveillance_tv_name"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/hd_common_edittext_bg"
+                    android:gravity="center_vertical"
+                    android:paddingLeft="@dimen/hse_pc_phone_app_layout_surveillance_item_edittext_paddinglefght"
+
+                    android:textColor="@color/hd_hse_common_component_phone_fontnum"
+                    android:textSize="@dimen/hd_common_textsize" />
+            </LinearLayout>
+            <!-- 检查时间 -->
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/hse_pc_phone_app_layout_surveillance_item_height"
+                android:layout_marginBottom="@dimen/hse_pc_phone_app_layout_surveillance_item_marginbottom">
+
+                <TextView
+                    android:layout_width="@dimen/hse_pc_phone_app_layout_surveillance_item_textview_width"
+                    android:layout_height="match_parent"
+                    android:gravity="center_vertical"
+                    android:text="检查时间"
+                    android:textColor="@color/hd_hse_common_describetext_gray"
+                    android:textSize="@dimen/hd_common_textsize" />
+
+                <TextView
+                    android:id="@+id/hse_pc_phone_app_layout_surveillance_tv_time"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/hd_common_edittext_bg"
+                    android:gravity="center_vertical"
+                    android:paddingLeft="@dimen/hse_pc_phone_app_layout_surveillance_item_edittext_paddinglefght"
+
+                    android:textColor="@color/hd_hse_common_component_phone_fontnum"
+                    android:textSize="@dimen/hd_common_textsize" />
+            </LinearLayout>
+
+            <!-- 分项任务 -->
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/hse_pc_phone_app_layout_surveillance_item_height"
+                android:layout_marginBottom="@dimen/hse_pc_phone_app_layout_surveillance_item_marginbottom">
+
+                <TextView
+                    android:layout_width="@dimen/hse_pc_phone_app_layout_surveillance_item_textview_width"
+                    android:layout_height="match_parent"
+                    android:gravity="center_vertical"
+                    android:text="*分项任务"
+                    android:textColor="@color/hd_hse_common_describetext_gray"
+                    android:textSize="@dimen/hd_common_textsize" />
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <TextView
+                        android:id="@+id/hse_pc_phone_app_layout_surveillance_tv_workorder"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@drawable/hd_common_edittext_bg"
+                        android:gravity="center_vertical"
+                        android:paddingLeft="@dimen/hse_pc_phone_app_layout_surveillance_item_edittext_paddinglefght"
+                        android:textColor="@color/hd_hse_common_component_phone_fontnum"
+                        android:textSize="@dimen/hd_common_textsize" />
+
+                    <ImageView
+                        android:layout_width="@dimen/hse_pc_phone_app_layout_surveillance_item_height"
+                        android:layout_height="match_parent"
+                        android:layout_alignParentRight="true"
+                        android:src="@drawable/hd_hse_photo_add" />
+                </RelativeLayout>
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/hse_pc_phone_app_layout_surveillance_item_height"
+                android:layout_marginBottom="@dimen/hse_pc_phone_app_layout_surveillance_item_marginbottom">
+
+                <TextView
+                    android:layout_width="@dimen/hse_pc_phone_app_layout_surveillance_item_textview_width"
+                    android:layout_height="match_parent"
+                    android:gravity="center_vertical"
+                    android:text="责任归属"
+                    android:textColor="@color/hd_hse_common_describetext_gray"
+                    android:textSize="@dimen/hd_common_textsize" />
+
+                <EditText
+                    android:id="@+id/hse_pc_phone_app_layout_surveillance_ed_zrgs"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/hd_common_edittext_bg"
+                    android:gravity="center_vertical"
+                    android:paddingLeft="@dimen/hse_pc_phone_app_layout_surveillance_item_edittext_paddinglefght"
+                    android:textColor="@color/hd_hse_common_component_phone_fontnum"
+                    android:textSize="@dimen/hd_common_textsize" />
+            </LinearLayout>
+
+            <!--新加三个字段  条款分类 、 条款内容、分数-->
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/hse_pc_phone_app_layout_surveillance_item_height"
+                android:layout_marginBottom="@dimen/hse_pc_phone_app_layout_surveillance_item_marginbottom">
+
+                <TextView
+                    android:layout_width="@dimen/hse_pc_phone_app_layout_surveillance_item_textview_width"
+                    android:layout_height="match_parent"
+                    android:gravity="center_vertical"
+                    android:text="条款分类"
+                    android:textColor="@color/hd_hse_common_describetext_gray"
+                    android:textSize="@dimen/hd_common_textsize" />
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <TextView
+                        android:id="@+id/hse_pc_phone_app_layout_surveillance_tv_termType"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@drawable/hd_common_edittext_bg"
+                        android:gravity="center_vertical"
+                        android:paddingLeft="@dimen/hse_pc_phone_app_layout_surveillance_item_edittext_paddinglefght"
+                        android:textColor="@color/hd_hse_common_component_phone_fontnum"
+                        android:textSize="@dimen/hd_common_textsize" />
+
+                    <ImageView
+                        android:layout_width="@dimen/hse_pc_phone_app_layout_surveillance_item_height"
+                        android:layout_height="match_parent"
+                        android:layout_alignParentRight="true"
+                        android:src="@drawable/hd_hse_photo_add" />
+                </RelativeLayout>
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/hse_pc_phone_app_layout_surveillance_item_height"
+                android:layout_marginBottom="@dimen/hse_pc_phone_app_layout_surveillance_item_marginbottom">
+
+                <TextView
+                    android:layout_width="@dimen/hse_pc_phone_app_layout_surveillance_item_textview_width"
+                    android:layout_height="match_parent"
+                    android:gravity="center_vertical"
+                    android:text="条款内容"
+                    android:textColor="@color/hd_hse_common_describetext_gray"
+                    android:textSize="@dimen/hd_common_textsize" />
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <TextView
+                        android:id="@+id/hse_pc_phone_app_layout_surveillance_tv_termContent"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@drawable/hd_common_edittext_bg"
+                        android:gravity="center_vertical"
+                        android:paddingLeft="@dimen/hse_pc_phone_app_layout_surveillance_item_edittext_paddinglefght"
+                        android:textColor="@color/hd_hse_common_component_phone_fontnum"
+                        android:textSize="@dimen/hd_common_textsize" />
+
+                    <ImageView
+                        android:layout_width="@dimen/hse_pc_phone_app_layout_surveillance_item_height"
+                        android:layout_height="match_parent"
+                        android:layout_alignParentRight="true"
+                        android:src="@drawable/hd_hse_photo_add" />
+                </RelativeLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/hse_pc_phone_app_layout_surveillance_item_height"
+                android:layout_marginBottom="@dimen/hse_pc_phone_app_layout_surveillance_item_marginbottom">
+
+                <TextView
+                    android:layout_width="@dimen/hse_pc_phone_app_layout_surveillance_item_textview_width"
+                    android:layout_height="match_parent"
+                    android:gravity="center_vertical"
+                    android:text="得分"
+                    android:textColor="@color/hd_hse_common_describetext_gray"
+                    android:textSize="@dimen/hd_common_textsize" />
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <TextView
+                        android:id="@+id/hse_pc_phone_app_layout_surveillance_tv_score"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@drawable/hd_common_edittext_bg"
+                        android:gravity="center_vertical"
+                        android:paddingLeft="@dimen/hse_pc_phone_app_layout_surveillance_item_edittext_paddinglefght"
+                        android:textColor="@color/hd_hse_common_component_phone_fontnum"
+                        android:textSize="@dimen/hd_common_textsize" />
+
+                </RelativeLayout>
+            </LinearLayout>
+
+
+            <!--end新加三个字段  条款分类 、 条款内容、分数-->
+
+
+            <!-- 问题描述 -->
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/hse_pc_phone_app_layout_surveillance_item_double_height"
+                android:layout_marginBottom="@dimen/hse_pc_phone_app_layout_surveillance_item_marginbottom">
+
+                <TextView
+                    android:layout_width="@dimen/hse_pc_phone_app_layout_surveillance_item_textview_width"
+                    android:layout_height="match_parent"
+                    android:gravity="center_vertical"
+                    android:text="*问题描述"
+                    android:textColor="@color/hd_hse_common_describetext_gray"
+                    android:textSize="@dimen/hd_common_textsize" />
+
+                <EditText
+                    android:id="@+id/hse_pc_phone_app_layout_surveillance_ed_describe_problem"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/hd_common_edittext_bg"
+                    android:gravity="center_vertical"
+                    android:paddingLeft="@dimen/hse_pc_phone_app_layout_surveillance_item_edittext_paddinglefght"
+                    android:textColor="@color/hd_hse_common_component_phone_fontnum"
+                    android:textSize="@dimen/hd_common_textsize" />
+            </LinearLayout>
+            <!-- 问题地点 -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/hse_pc_phone_app_layout_surveillance_item_height"
+                android:layout_marginBottom="@dimen/hse_pc_phone_app_layout_surveillance_item_marginbottom">
+
+                <TextView
+                    android:layout_width="@dimen/hse_pc_phone_app_layout_surveillance_item_textview_width"
+                    android:layout_height="match_parent"
+                    android:gravity="center_vertical"
+                    android:text="问题地点"
+                    android:textColor="@color/hd_hse_common_describetext_gray"
+                    android:textSize="@dimen/hd_common_textsize" />
+
+                <EditText
+                    android:id="@+id/hse_pc_phone_app_layout_surveillance_ed_site"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/hd_common_edittext_bg"
+                    android:gravity="center_vertical"
+                    android:paddingLeft="@dimen/hse_pc_phone_app_layout_surveillance_item_edittext_paddinglefght"
+                    android:textColor="@color/hd_hse_common_component_phone_fontnum"
+                    android:textSize="@dimen/hd_common_textsize" />
+            </LinearLayout>
+
+
+            <!-- 现场负责人 -->
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/hse_pc_phone_app_layout_surveillance_item_height"
+                android:layout_marginBottom="@dimen/hse_pc_phone_app_layout_surveillance_item_marginbottom">
+
+                <TextView
+                    android:layout_width="@dimen/hse_pc_phone_app_layout_surveillance_item_textview_width"
+                    android:layout_height="match_parent"
+                    android:gravity="center_vertical"
+                    android:text="现场负责人"
+                    android:textColor="@color/hd_hse_common_describetext_gray"
+                    android:textSize="@dimen/hd_common_textsize" />
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <EditText
+                        android:id="@+id/hse_pc_phone_app_layout_surveillance_ed_leader"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@drawable/hd_common_edittext_bg"
+                        android:focusable="false"
+                        android:gravity="center_vertical"
+                        android:paddingLeft="@dimen/hse_pc_phone_app_layout_surveillance_item_edittext_paddinglefght"
+                        android:textColor="@color/hd_hse_common_component_phone_fontnum"
+                        android:textSize="@dimen/hd_common_textsize" />
+
+                    <Button
+                        android:id="@+id/hse_pc_phone_app_layout_surveillance_bt_leader"
+                        android:layout_width="@dimen/hse_pc_phone_app_layout_surveillance_item_height"
+                        android:layout_height="match_parent"
+                        android:layout_alignParentRight="true"
+                        android:background="@drawable/hd_hse_photo_add" />
+                </RelativeLayout>
+            </LinearLayout>
+
+            <!-- 违章人员 -->
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/hse_pc_phone_app_layout_surveillance_item_height"
+                android:layout_marginBottom="@dimen/hse_pc_phone_app_layout_surveillance_item_marginbottom">
+
+                <TextView
+                    android:layout_width="@dimen/hse_pc_phone_app_layout_surveillance_item_textview_width"
+                    android:layout_height="match_parent"
+                    android:gravity="center_vertical"
+                    android:text="违章人员"
+                    android:textColor="@color/hd_hse_common_describetext_gray"
+                    android:textSize="@dimen/hd_common_textsize" />
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <EditText
+                        android:id="@+id/hse_pc_phone_app_layout_surveillance_ed_illegal_person"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@drawable/hd_common_edittext_bg"
+                        android:gravity="center_vertical"
+                        android:paddingLeft="@dimen/hse_pc_phone_app_layout_surveillance_item_edittext_paddinglefght"
+                        android:textColor="@color/hd_hse_common_component_phone_fontnum"
+                        android:textSize="@dimen/hd_common_textsize" />
+
+                    <Button
+                        android:id="@+id/hse_pc_phone_app_layout_surveillance_bt_illegal_person"
+                        android:layout_width="@dimen/hse_pc_phone_app_layout_surveillance_item_height"
+                        android:layout_height="match_parent"
+                        android:layout_alignParentRight="true"
+                        android:background="@drawable/hd_hse_photo_add" />
+                </RelativeLayout>
+            </LinearLayout>
+            <!-- 责任单位 -->
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/hse_pc_phone_app_layout_surveillance_item_height"
+                android:layout_marginBottom="@dimen/hse_pc_phone_app_layout_surveillance_item_marginbottom">
+
+                <TextView
+                    android:layout_width="@dimen/hse_pc_phone_app_layout_surveillance_item_textview_width"
+                    android:layout_height="match_parent"
+                    android:gravity="center_vertical"
+                    android:text="责任单位"
+                    android:textColor="@color/hd_hse_common_describetext_gray"
+                    android:textSize="@dimen/hd_common_textsize" />
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <EditText
+                        android:id="@+id/hse_pc_phone_app_layout_surveillance_ed_duty_company"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@drawable/hd_common_edittext_bg"
+                        android:focusable="false"
+                        android:gravity="center_vertical"
+                        android:paddingLeft="@dimen/hse_pc_phone_app_layout_surveillance_item_edittext_paddinglefght"
+                        android:textColor="@color/hd_hse_common_component_phone_fontnum"
+                        android:textSize="@dimen/hd_common_textsize" />
+
+                    <Button
+                        android:id="@+id/hse_pc_phone_app_layout_surveillance_bt_duty_company"
+                        android:layout_width="@dimen/hse_pc_phone_app_layout_surveillance_item_height"
+                        android:layout_height="match_parent"
+                        android:layout_alignParentRight="true"
+                        android:background="@drawable/hd_hse_photo_add"
+                        android:visibility="gone" />
+                </RelativeLayout>
+            </LinearLayout>
+
+            <!-- 罚款金额 -->
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/hse_pc_phone_app_layout_surveillance_item_height"
+                android:layout_marginBottom="@dimen/hse_pc_phone_app_layout_surveillance_item_marginbottom"
+                android:visibility="gone">
+
+                <TextView
+                    android:layout_width="@dimen/hse_pc_phone_app_layout_surveillance_item_textview_width"
+                    android:layout_height="match_parent"
+                    android:gravity="center_vertical"
+                    android:text="罚款金额"
+                    android:textColor="@color/hd_hse_common_describetext_gray"
+                    android:textSize="@dimen/hd_common_textsize" />
+
+                <EditText
+                    android:id="@+id/hse_pc_phone_app_layout_surveillance_ed_penalty_money"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/hd_common_edittext_bg"
+                    android:gravity="center_vertical"
+                    android:numeric="decimal"
+                    android:paddingLeft="@dimen/hse_pc_phone_app_layout_surveillance_item_edittext_paddinglefght"
+                    android:textColor="@color/hd_hse_common_component_phone_fontnum"
+                    android:textSize="@dimen/hd_common_textsize" />
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/hse_pc_phone_app_layout_surveillance_item_height"
+                android:orientation="horizontal"
+                android:visibility="gone">
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:gravity="center_vertical">
+
+                    <CheckBox
+                        android:id="@+id/hse_pc_phone_app_layout_surveillance_checkbox_rectify"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:button="@drawable/hd_hse_common_component_checkbox_selector"
+                        android:text="是否已整改"
+                        android:textSize="@dimen/hd_common_textsize" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:gravity="center_vertical">
+
+                    <CheckBox
+                        android:id="@+id/hse_pc_phone_app_layout_surveillance_checkbox_blacklist"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:button="@drawable/hd_hse_common_component_checkbox_selector"
+                        android:text="建议人员转黑名单"
+                        android:textSize="@dimen/hd_common_textsize" />
+                </LinearLayout>
+            </LinearLayout>
+            <!-- 点击是否整改出来的内容 -->
+
+            <LinearLayout
+                android:id="@+id/hse_pc_phone_app_layout_surveillance_li_zg"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:paddingLeft="@dimen/hse_pc_phone_app_layout_surveillance_padding_fs"
+                android:paddingRight="@dimen/hse_pc_phone_app_layout_surveillance_padding_fs"
+                android:visibility="gone">
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/rmt_common_divider_height"
+                    android:background="@color/hd_hse_common_btn_bg_gray" />
+
+                <com.hd.hse.common.module.phone.custom.HorizontalListView
+                    android:id="@+id/hse_pc_phone_app_layout_surveillance_lv_zg"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/hse_pc_phone_app_layout_surveillance_padding"></com.hd.hse.common.module.phone.custom.HorizontalListView>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/rmt_common_divider_height"
+                    android:background="@color/hd_hse_common_btn_bg_gray" />
+            </LinearLayout>
+            <!-- 点击黑名单之后出来的内容 -->
+
+            <!--<LinearLayout
+                android:id="@+id/hse_pc_phone_app_layout_surveillance_ll_click_blacklist"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/hse_pc_phone_app_layout_surveillance_item_marginbottom"
+                android:background="@drawable/hd_common_edittext_bg"
+                android:orientation="vertical"
+                android:padding="@dimen/hse_pc_phone_app_layout_surveillance_item_marginbottom"
+                android:visibility="invisible" >
+
+                &lt;!&ndash; 禁入原因 &ndash;&gt;
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/hse_pc_phone_app_layout_surveillance_item_height"
+                    android:layout_marginBottom="@dimen/hse_pc_phone_app_layout_surveillance_item_marginbottom" >
+
+                    <TextView
+                        android:layout_width="@dimen/hse_pc_phone_app_layout_surveillance_item_textview_width"
+                        android:layout_height="match_parent"
+                        android:gravity="center_vertical"
+                        android:text="禁入原因"
+                        android:textColor="@color/hd_hse_common_describetext_gray"
+                        android:textSize="@dimen/hd_common_textsize" />
+
+                    <Spinner
+                        android:id="@+id/hse_pc_phone_app_layout_surveillance_sp_jryy"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:gravity="center_vertical"
+                        android:paddingLeft="@dimen/hse_pc_phone_app_layout_surveillance_item_edittext_paddinglefght"
+                        android:textColor="@color/hd_hse_common_component_phone_fontnum"
+                        android:textSize="@dimen/hd_common_textsize" />
+                </LinearLayout>
+
+                &lt;!&ndash; 录入备注 &ndash;&gt;
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/hse_pc_phone_app_layout_surveillance_item_height" >
+
+                    <TextView
+                        android:layout_width="@dimen/hse_pc_phone_app_layout_surveillance_item_textview_width"
+                        android:layout_height="match_parent"
+                        android:gravity="center_vertical"
+                        android:text="录入备注"
+                        android:textColor="@color/hd_hse_common_describetext_gray"
+                        android:textSize="@dimen/hd_common_textsize" />
+
+                    <EditText
+                        android:id="@+id/hse_pc_phone_app_layout_surveillance_ed_remark"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@drawable/hd_common_edittext_bg"
+                        android:gravity="center_vertical"
+                        android:paddingLeft="@dimen/hse_pc_phone_app_layout_surveillance_item_edittext_paddinglefght"
+                        android:textColor="@color/hd_hse_common_component_phone_fontnum"
+                        android:textSize="@dimen/hd_common_textsize" />
+                </LinearLayout>
+            </LinearLayout>-->
+        </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>

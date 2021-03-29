@@ -1,0 +1,2 @@
+INSERT INTO hse_sys_appmodule(code, name, resimg, clickdealclass, layoutorder, enabled, tag, dr, type, modelnum, isswcard)
+ VALUES("hse-gas-phone-app","气体检测", "hd_hse_nav_model_qtjc", "com.hd.hse.scene.phone.ui.event.homepage.GasDetectApp", 6, 1 ,0, 0, "ONLINE", "QT01", 0);

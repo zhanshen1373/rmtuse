@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RadioGroup xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/rg_step_bottom_bar"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal" >
+
+    <!--<RadioButton-->
+        <!--android:id="@+id/rb_step_bottom_bar_right"-->
+        <!--android:layout_width="wrap_content"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:layout_margin="12dp"-->
+        <!--android:gravity="center"-->
+        <!--android:button="@drawable/hd_hse_common_module_step_bottom_bar_rb_right" />-->
+
+    <!--<RadioButton-->
+        <!--android:id="@+id/rb_step_bottom_bar_error"-->
+        <!--android:layout_width="wrap_content"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:layout_margin="12dp"-->
+        <!--android:button="@drawable/hd_hse_common_module_step_bottom_bar_rb_error" />-->
+
+    <!--<RadioButton-->
+        <!--android:id="@+id/rb_step_bottom_bar_unsure"-->
+        <!--android:layout_width="wrap_content"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:layout_margin="12dp"-->
+        <!--android:button="@drawable/hd_hse_common_module_step_bottom_bar_rb_unsure" />-->
+
+</RadioGroup>

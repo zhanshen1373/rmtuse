@@ -1,0 +1,39 @@
+apply plugin: 'android'
+
+dependencies {
+    compile fileTree(dir: 'libs', include: '*.jar')
+    compile project(':hse-scene-phone-app')
+    compile project(':hse-common-module-phone')
+    compile project(':hse-common-component-phone')
+    compile project(':hse-app-phone-res')
+    compile project(':hse-scw-phone-app')
+    compile project(':hse-end-phone-app')
+    compile project(':hse-wov-phone-app')
+    compile project(':hse-main-phone-app')
+    compile project(':hse-dc-phone-app')
+}
+
+android {
+    compileSdkVersion 19
+    buildToolsVersion "19.0.3"
+
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+
+    sourceSets {
+        main {
+            manifest.srcFile 'AndroidManifest.xml'
+            java.srcDirs = ['src']
+            resources.srcDirs = ['src']
+            aidl.srcDirs = ['src']
+            renderscript.srcDirs = ['src']
+            res.srcDirs = ['res']
+            assets.srcDirs = ['assets']
+        }
+
+        // Move the tests to tests/java, tests/res, etc...
+        instrumentTest.setRoot('tests')
+    }
+}

@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:minHeight="300dp"
+    android:padding="8dp" >
+
+    <com.hd.hse.common.module.phone.adapter.StepBottomBar
+        android:id="@+id/sbb_dialog_content_botton_bar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true" />
+
+    <RelativeLayout
+        android:id="@+id/flyt_dialog_content_desc_container"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@id/sbb_dialog_content_botton_bar"
+        android:layout_marginBottom="8dp"
+        android:minHeight="200dp" />
+
+</RelativeLayout>

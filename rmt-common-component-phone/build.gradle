@@ -1,0 +1,58 @@
+apply plugin: 'com.android.library'
+
+android {
+    compileSdkVersion 25
+    buildToolsVersion "25.0.2"
+
+    defaultConfig {
+        minSdkVersion 18
+        targetSdkVersion 19
+        compileOptions {
+            sourceCompatibility JavaVersion.VERSION_1_7
+            targetCompatibility JavaVersion.VERSION_1_7
+        }
+        multiDexEnabled true
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.txt'
+        }
+    }
+//为了解决部分第三方库重复打包了META-INF的问题
+//    packagingOptions {exclude 'META-INF/LICENSE.txt'exclude 'META-INF/NOTICE.txt'exclude 'META-INF/license.txt'exclude 'META-INF/LICENSE'exclude 'META-INF/notice.txt'exclude 'META-INF/NOTICE'exclude 'META-INF/DEPENDENCIES.txt'exclude 'META-INF/DEPENDENCIES' }
+    packagingOptions {
+        exclude 'META-INF/DEPENDENCIES.txt'
+        exclude 'META-INF/LICENSE.txt'
+        exclude 'META-INF/NOTICE.txt'
+        exclude 'META-INF/NOTICE'
+        exclude 'META-INF/LICENSE'
+        exclude 'META-INF/DEPENDENCIES'
+        exclude 'META-INF/notice.txt'
+        exclude 'META-INF/license.txt'
+        exclude 'META-INF/dependencies.txt'
+        exclude 'META-INF/LGPL2.1'
+    }
+
+}
+
+
+dependencies {
+    compile project(':common')
+    compile project(':rmt-common')
+    compile project(':rmt-entity-service')
+    compile 'com.android.support:appcompat-v7:25.3.1'
+//    compile 'com.android.support:design:25.3.1'
+    compile files('libs/xutils-2.6.10.jar')
+    compile 'com.nineoldandroids:library:2.4.0'
+
+    // 网络框架 基于okhttp
+    compile 'com.squareup.retrofit2:retrofit:2.2.0'
+    // retrofit的json转换器
+    compile 'com.squareup.retrofit2:converter-gson:2.2.0'
+    // facebook的调试库，用来调试网络连接和数据库
+    compile 'com.facebook.stetho:stetho:1.4.2'
+    compile 'com.facebook.stetho:stetho-okhttp3:1.4.2'
+
+}
